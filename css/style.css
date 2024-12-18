@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    --main-color: #2AB2AF;
+    --btn-color: #C0DF34;
+    --bg-color: #E5EFF5;
+    --text-color: #98A6BD;
+    --white: #FFFFFF;
+    
+    --font: "Karla", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+button,
+a {
+    font-family: var(--font);
+    cursor: pointer;
+}
+
+.card {
+    background-color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 100%;
+    max-width: 720px;
+    border-radius: 10px;
+    margin: 0 1.5rem;
+    height: min-content;
+}
+
+.content {
+    padding: 2.8rem 2.3rem;
+}
+
+.content-title {
+    color: var(--main-color);
+    font-size: 1.5rem;
+    padding-bottom: 1.3rem;
+}
+
+.content-sub-title {
+    color: var(--btn-color);
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+}
+
+.content-text {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    max-width: 600px;
+    width: 100%;
+    line-height: 1.5;
+}
+
+.plan-and-about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.plan {
+    background-color: var(--main-color);
+    padding: 2.6rem 2.3rem;
+    border-bottom-left-radius: 10px;
+}
+
+.plan-title {
+    color: var(--white);
+    font-size: 1.25rem;
+    padding-bottom: 1rem;
+}
+
+.plan-price {
+    color: var(--white);
+    font-size: 1.8rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.month {
+    opacity: 0.55;
+    font-size: 1.1rem;
+    padding-left: 0.8rem;
+}
+
+.plan-text {
+    color: var(--white);
+    font-size: 1rem;
+    padding-bottom: 1.2rem;
+}
+
+.about {
+    background-color: #4ABEBD;
+    padding: 2.6rem 2.3rem;
+    border-bottom-right-radius: 10px;
+}
+
+.plan-button {
+    background-color: var(--btn-color);
+    color: var(--white);
+    width: 100%;
+    height: 50px;
+    border-radius: 7px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.236) 0px 5px 15px;
+    transition: all 0.4s ease-in-out;
+}
+
+.plan-button:hover {
+    background-color: #4ABEBD;
+    border: 2px solid var(--white);
+}
+
+.about {
+    color: var(--white);
+}
+
+.about-title {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+}
+
+.about-text {
+    font-size: 1rem;
+    opacity: 0.9;
+    max-width: 210px;
+    width: 100%;
+}
+
+@media screen and (max-width: 349px) {
+    .plan-and-about {
+        grid-template-columns: 1fr;
+    }
+
+    .content-title {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    body {
+        background-color: #C0DF34;
+    }
+}
+
+@media screen and (min-width: 350px) and (max-width: 672px) {
+    .content-title {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+    
+    .plan-and-about {
+        grid-template-columns: 1fr;
+    } 
+
+    .plan {
+        border-radius: 0px;
+    }
+
+    .about {
+        border-bottom-left-radius: 10px ;
+    }
+}
